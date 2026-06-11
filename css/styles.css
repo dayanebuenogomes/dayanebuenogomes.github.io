@@ -647,6 +647,19 @@ body::after {
 .step h3 { font-size: 1.3rem; margin-bottom: 0.45rem; }
 .step p { margin: 0; font-size: 0.98rem; color: #44503f; }
 
+.online-seo {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+.online-seo h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.6rem;
+}
+.online-seo p {
+  font-size: 1rem;
+  color: #44503f;
+}
+
 .online-perks {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dayanebuenogomes.github.io/sitemap.xml
