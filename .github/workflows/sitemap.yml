@@ -1,0 +1,37 @@
+name: Atualiza lastmod do sitemap
+
+# Sempre que o conteúdo da página mudar, grava a data do commit no sitemap.xml.
+# O filtro de path (index.html) garante que o commit automático do próprio
+# workflow (que só altera sitemap.xml) não dispare uma nova execução.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Atualiza <lastmod> para a data atual (UTC)
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          sed -i "s#<lastmod>.*</lastmod>#<lastmod>${DATE}</lastmod>#" sitemap.xml
+          echo "lastmod = ${DATE}"
+
+      - name: Commita se houver mudança
+        run: |
+          if git diff --quiet sitemap.xml; then
+            echo "sitemap.xml já atualizado, nada a fazer."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "chore: atualiza lastmod do sitemap"
+          git push

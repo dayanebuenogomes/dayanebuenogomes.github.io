@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psicóloga Online Curitiba e Brasil · TCC | Dayane Bueno Gomes</title>
-  <meta name="description" content="Psicóloga online (CRP 08/23388) com 15 anos de experiência. Terapia Cognitivo-Comportamental para ansiedade, depressão e autoestima. De Curitiba para todo o Brasil e brasileiros no exterior. Agende pelo WhatsApp.">
+  <meta name="theme-color" content="#3A5A40">
+  <title>Psicóloga Online em Curitiba e Brasil · TCC | Dayane Gomes</title>
+  <meta name="description" content="Psicóloga online (CRP 08/23388), 15 anos de experiência em TCC para ansiedade e depressão. De Curitiba para todo o Brasil e brasileiros no exterior.">
   <meta name="author" content="Dayane Bueno Gomes">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Psicóloga Online · TCC | Dayane Bueno Gomes · Curitiba e todo o Brasil">
+  <meta property="og:title" content="Psicóloga Online em Curitiba e Brasil · TCC | Dayane Gomes">
   <meta property="og:description" content="Psicoterapia online para adolescentes e adultos, no Brasil e no exterior. Terapia Cognitivo-Comportamental com acolhimento, escuta qualificada e transformação.">
   <meta property="og:url" content="https://dayanebuenogomes.github.io/">
   <meta property="og:image" content="https://dayanebuenogomes.github.io/assets/dayane.jpg">
@@ -21,8 +22,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://dayanebuenogomes.github.io/">
 
+  <!-- Preload do retrato (elemento LCP) na variante WebP, casando com o <source> do hero -->
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/dayane-480.webp 480w, assets/dayane-864.webp 864w" imagesizes="(max-width: 64rem) 70vw, 384px" fetchpriority="high">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,32 +41,87 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dayane Bueno Gomes",
-    "jobTitle": "Psicóloga Clínica",
-    "description": "Psicóloga há 15 anos, pós-graduada, especializada em Terapia Cognitivo-Comportamental. Atendimento online para adolescentes e adultos.",
-    "url": "https://dayanebuenogomes.github.io/",
-    "image": "https://dayanebuenogomes.github.io/assets/dayane.jpg",
-    "identifier": "CRP 08/23388",
-    "telephone": "+55 41 98863-6987",
-    "knowsAbout": ["Terapia Cognitivo-Comportamental", "Ansiedade", "Depressão", "Autoestima", "Relacionamentos"],
-    "contactPoint": { "@type": "ContactPoint", "contactType": "Agendamento", "url": "https://wa.me/5541988636987", "availableLanguage": "Portuguese" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Dayane Bueno Gomes · Psicóloga Online",
-    "description": "Psicoterapia online com Terapia Cognitivo-Comportamental (TCC) para adolescentes e adultos. Atendimento de Curitiba para todo o Brasil e brasileiros no exterior, em português.",
-    "url": "https://dayanebuenogomes.github.io/",
-    "image": "https://dayanebuenogomes.github.io/assets/dayane.jpg",
-    "telephone": "+55 41 98863-6987",
-    "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
-    "areaServed": ["Curitiba", "Brasil", "Brasileiros no exterior"],
-    "knowsLanguage": "pt-BR",
-    "founder": { "@type": "Person", "name": "Dayane Bueno Gomes", "jobTitle": "Psicóloga Clínica" }
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://dayanebuenogomes.github.io/#dayane",
+        "name": "Dayane Bueno Gomes",
+        "jobTitle": "Psicóloga Clínica",
+        "description": "Psicóloga há 15 anos, pós-graduada, especializada em Terapia Cognitivo-Comportamental. Atendimento online para adolescentes e adultos.",
+        "url": "https://dayanebuenogomes.github.io/",
+        "image": { "@id": "https://dayanebuenogomes.github.io/#primaryimage" },
+        "telephone": "+5541988636987",
+        "knowsAbout": ["Terapia Cognitivo-Comportamental", "Ansiedade", "Depressão", "Autoestima", "Relacionamentos", "Estresse"],
+        "knowsLanguage": "pt-BR",
+        "identifier": { "@type": "PropertyValue", "propertyID": "CRP", "name": "Conselho Regional de Psicologia", "value": "08/23388" },
+        "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "Registro Profissional", "recognizedBy": { "@type": "Organization", "name": "Conselho Federal de Psicologia (CFP)" }, "identifier": "CRP 08/23388" },
+        "contactPoint": { "@type": "ContactPoint", "contactType": "Agendamento", "url": "https://wa.me/5541988636987", "availableLanguage": "pt-BR" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
+        "worksFor": { "@id": "https://dayanebuenogomes.github.io/#business" }
+      },
+      {
+        "@type": ["Psychologist", "LocalBusiness"],
+        "@id": "https://dayanebuenogomes.github.io/#business",
+        "name": "Dayane Bueno Gomes · Psicóloga Online",
+        "description": "Psicoterapia online com Terapia Cognitivo-Comportamental (TCC) para adolescentes e adultos. Atendimento de Curitiba para todo o Brasil e brasileiros no exterior, em português.",
+        "url": "https://dayanebuenogomes.github.io/",
+        "image": { "@id": "https://dayanebuenogomes.github.io/#primaryimage" },
+        "telephone": "+5541988636987",
+        "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
+        "areaServed": [
+          { "@type": "City", "name": "Curitiba", "containedInPlace": { "@type": "AdministrativeArea", "name": "Paraná" } },
+          { "@type": "Country", "name": "Brasil" }
+        ],
+        "audience": { "@type": "PeopleAudience", "audienceType": "Brasileiros no Brasil e no exterior" },
+        "serviceType": "Psicoterapia online (Terapia Cognitivo-Comportamental)",
+        "knowsLanguage": "pt-BR",
+        "founder": { "@id": "https://dayanebuenogomes.github.io/#dayane" },
+        "provider": { "@id": "https://dayanebuenogomes.github.io/#dayane" },
+        "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://wa.me/5541988636987", "availableLanguage": "pt-BR" },
+        "potentialAction": { "@type": "ReserveAction", "name": "Agendar sessão pelo WhatsApp", "target": "https://wa.me/5541988636987" }
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://dayanebuenogomes.github.io/#primaryimage",
+        "url": "https://dayanebuenogomes.github.io/assets/dayane.jpg",
+        "contentUrl": "https://dayanebuenogomes.github.io/assets/dayane.jpg",
+        "width": 864,
+        "height": 1296,
+        "caption": "Dayane Bueno Gomes, psicóloga clínica"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dayanebuenogomes.github.io/#website",
+        "url": "https://dayanebuenogomes.github.io/",
+        "name": "Dayane Bueno Gomes · Psicóloga Online",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://dayanebuenogomes.github.io/#dayane" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://dayanebuenogomes.github.io/#webpage",
+        "url": "https://dayanebuenogomes.github.io/",
+        "name": "Psicóloga Online em Curitiba e Brasil · TCC | Dayane Gomes",
+        "isPartOf": { "@id": "https://dayanebuenogomes.github.io/#website" },
+        "about": { "@id": "https://dayanebuenogomes.github.io/#business" },
+        "primaryImageOfPage": { "@id": "https://dayanebuenogomes.github.io/#primaryimage" },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dayanebuenogomes.github.io/#faq",
+        "isPartOf": { "@id": "https://dayanebuenogomes.github.io/#webpage" },
+        "mainEntity": [
+          { "@type": "Question", "name": "A terapia online funciona tão bem quanto a presencial?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Pesquisas mostram que a psicoterapia online tem eficácia equivalente à presencial para a maioria das demandas, como ansiedade e depressão. O vínculo terapêutico e o método são os mesmos, apenas o meio muda." } },
+          { "@type": "Question", "name": "Como funciona a primeira sessão?", "acceptedAnswer": { "@type": "Answer", "text": "A primeira sessão é um espaço de acolhimento e escuta. Você conta o que está vivendo, eu conheço a sua história e definimos, em conjunto, os objetivos do processo terapêutico. Sem julgamentos e no seu ritmo." } },
+          { "@type": "Question", "name": "O atendimento é sigiloso?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. O sigilo é garantido pelo Código de Ética Profissional do Psicólogo e vale integralmente para o atendimento online. Tudo o que é dito em sessão permanece entre nós." } },
+          { "@type": "Question", "name": "Para quem é o atendimento?", "acceptedAnswer": { "@type": "Answer", "text": "Atendo adolescentes e adultos. Cada processo é individualizado, considerando a história, o momento de vida e as necessidades de cada pessoa." } },
+          { "@type": "Question", "name": "Qual a duração e a frequência das sessões?", "acceptedAnswer": { "@type": "Answer", "text": "As sessões costumam ter cerca de 50 minutos, geralmente uma vez por semana. A frequência ideal é definida em conjunto, de acordo com a sua demanda e disponibilidade." } },
+          { "@type": "Question", "name": "Você atende brasileiros que moram no exterior?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Atendo brasileiros em qualquer país, com sessões de terapia online em português. Fazer terapia no seu idioma faz diferença, principalmente em temas como adaptação cultural, saudade e distância da família. Os horários são ajustados ao seu fuso." } },
+          { "@type": "Question", "name": "Quanto custa e como faço para agendar?", "acceptedAnswer": { "@type": "Answer", "text": "Os valores são informados no primeiro contato, junto com as condições de pagamento. Para agendar, basta enviar uma mensagem pelo WhatsApp e combinamos o melhor horário para você." } }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -223,6 +285,12 @@
           <h2 class="reveal d-1">Olá, sou a Dayane</h2>
           <div class="reveal d-2">
             <p>
+              <strong>Dayane Bueno Gomes é uma psicóloga clínica brasileira (CRP 08/23388),
+              com 15 anos de experiência, especializada em Terapia Cognitivo-Comportamental
+              (TCC). Atende 100% online, em português, de Curitiba (PR) para todo o Brasil e
+              para brasileiros que vivem no exterior.</strong>
+            </p>
+            <p>
               Sou psicóloga há 15 anos e pós-graduada, com ampla experiência em atendimento
               clínico de adolescentes e adultos.
             </p>
@@ -343,7 +411,7 @@
         </ol>
 
         <div class="online-seo reveal">
-          <h3>Psicóloga online em Curitiba, para todo o Brasil e brasileiros no exterior</h3>
+          <h3>Psicóloga online de TCC em Curitiba, para todo o Brasil e brasileiros no exterior</h3>
           <p>
             Atendo de Curitiba (PR) pacientes de qualquer cidade do Brasil. A psicologia online
             elimina a distância: você faz terapia com qualidade de onde estiver, seja em
@@ -467,11 +535,16 @@
       </nav>
       <div class="footer-contact">
         <a href="https://wa.me/5541988636987" target="_blank" rel="noopener">WhatsApp: +55 (41) 98863-6987</a>
+        <a href="tel:+5541988636987">Telefone: +55 (41) 98863-6987</a>
         <p>Psicóloga online · Curitiba (PR) · Brasil e exterior</p>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="ano">2026</span> Dayane Bueno Gomes. Todos os direitos reservados.</p>
+      <p>© <span id="ano">2026</span> Dayane Bueno Gomes. Todos os direitos reservados. · <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p class="footer-disclaimer">
+        As informações deste site têm caráter educativo e não substituem uma avaliação
+        psicológica individualizada. Os resultados variam de acordo com cada pessoa.
+      </p>
       <p class="footer-disclaimer">
         Este site não oferece atendimento de urgência. Em caso de crise ou risco, ligue para o
         CVV no número 188 (ligação gratuita, 24h) ou procure a emergência mais próxima.

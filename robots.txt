@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# Crawlers de IA / motores de resposta (citação em respostas geradas)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
 Sitemap: https://dayanebuenogomes.github.io/sitemap.xml
+LLM: https://dayanebuenogomes.github.io/llms.txt
