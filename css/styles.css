@@ -477,6 +477,84 @@ body::after {
   margin: 0;
 }
 
+/* ---------- Tipos de atendimento ---------- */
+.formats { background: var(--warm-white); }
+
+.formats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.format-card {
+  position: relative;
+  height: 100%;
+  padding: 2.2rem 2rem 2rem;
+  background: var(--paper);
+  border: 1px solid rgba(58, 90, 64, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+.format-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--terracotta);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease-out);
+}
+.format-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 44px -20px rgba(26, 45, 32, 0.35);
+}
+.format-card:hover::before { transform: scaleY(1); }
+
+.format-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+.format-card > p {
+  font-size: 1rem;
+  color: #44503f;
+  margin: 0;
+}
+
+.format-list {
+  list-style: none;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.format-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.96rem;
+  color: #44503f;
+}
+.format-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+.format-note {
+  margin: 1.2rem 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(58, 90, 64, 0.12);
+  font-size: 0.92rem;
+  color: #5a6655;
+}
+
 /* ---------- Citação ---------- */
 .quote-band {
   background:
@@ -941,7 +1019,7 @@ details[open] .faq-icon::after { transform: rotate(0deg); }
 
   .help-grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .about-grid, .approach-grid, .faq-grid { grid-template-columns: 1fr; }
+  .about-grid, .approach-grid, .faq-grid, .formats-grid { grid-template-columns: 1fr; }
   .faq-grid .section-head { position: static; }
   .about-photo { width: min(75%, 19rem); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
